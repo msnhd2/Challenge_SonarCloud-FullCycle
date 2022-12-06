@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node_version: 16
+      - run: npm install --save-dev
       - run: npm run test
 
 
