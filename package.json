@@ -1,0 +1,24 @@
+{
+  "name": "challenge_sonarcloud-fullcycle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msnhd2/Challenge_SonarCloud-FullCycle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msnhd2/Challenge_SonarCloud-FullCycle/issues"
+  },
+  "homepage": "https://github.com/msnhd2/Challenge_SonarCloud-FullCycle#readme",
+  "dependencies": {
+    "@types/jest": "^29.2.4",
+    "jest": "^29.3.1",
+    "sonar-scanner": "^3.1.0"
+  }
+}
