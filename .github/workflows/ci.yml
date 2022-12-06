@@ -1,8 +1,7 @@
 name: Challenge-SonarCloud
 on:
   pull_request:
-    branches:
-      - develop
+    branches: [ main ]
 
 jobs:
   run-ci:
