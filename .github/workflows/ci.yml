@@ -1,17 +1,24 @@
 name: Challenge-SonarCloud
 on:
   pull_request:
-    branches:
-      - develop
+    branches: [ main ]
 
 jobs:
   run-ci:
     runs-on: ubuntu-latest
+    name: run-ci
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node_version: 16
+          node_version: '16'
+      - run: npm install --save-dev
       - run: npm run test
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
 
   
